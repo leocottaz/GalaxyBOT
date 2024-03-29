@@ -1,0 +1,11 @@
+  { 
+    "token": "//////////////////////",
+    "prefix": "$",
+    "ownerid": "435104377439780866",
+    "singleCommand": ["$reload", "$refresh"],
+    "red": "#b70000",
+    "orange": "#ff6a00",
+    "green": "#00ff26",
+    "purple": "#d604cf",
+    "blue": "#0180FE"
+    }

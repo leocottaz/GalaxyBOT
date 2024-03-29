@@ -1,0 +1,21 @@
+const Discord = require("discord.js"); 
+
+module.exports.run = async (bot, message) => { 
+ 
+    let kodomo = message.guild.member(message.mentions.users.first() || message.guild.member.get(args[0]));
+    if (!kodomo) {
+       return message.channel.send(`${message.author.name}... L'utilisateur n'a pas été trouver..`);
+   }
+
+   var kodo = new Discord.MessageEmbed()
+
+   .setColor("#55FF55")
+   .addField( kodomo ,"\nBienvenue à toi , niah niah niah...")
+
+   message.channel.send(kodo)
+   message.delete().catch();  
+
+}
+module.exports.help = {
+    name: "bvn"
+}

@@ -1,0 +1,13 @@
+const Discord = require("discord.js"); 
+
+module.exports.run = async (bot, message) => { 
+
+ let channel = bot.channels.get("567023004823977989");
+  
+  message.channel.send(`Bravo ${message.author.username} ! Tu gagne 3000 coins sur le BOT !! 👻🎃👻`)
+ channel.send(`@here ! \nBravo a ${message.author} qui a trouver la commande $hall ! *C'êtait difficile hein ? Non ? Ah ok..* \n Elle/Il remporte **3000 coins** sur le BOT !!`)
+
+}
+module.exports.help = {
+    name: "hall"
+}

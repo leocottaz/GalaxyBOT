@@ -1,0 +1,19 @@
+const Discord = require("discord.js"); 
+
+module.exports.run = async (bot, message) => { 
+
+  
+  message.channel.send(`<a:chargement:648075612094988318> Veuillez patientez !`)
+.then(function(charge) {
+  
+var chan = message.guild.channels.filter(channel => channel.type === 'text')
+
+   chan.setName(chan.name.replace(/-/g, "\u2009\u2009"))
+
+charge.edit("Tous les salons ont perdu leur tiret ! :white_check_mark:")
+          
+  });  
+}
+module.exports.help = {
+    name: "channel-space"
+}

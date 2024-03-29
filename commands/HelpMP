@@ -1,0 +1,47 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
+  
+  message.channel.send("MP en cours d'envoie ...")
+  .then(function(erreur) {
+    
+var fun = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setDescription("Commande help MP")
+.addField("Commandes Fun","**``$ascii [texte de 9 caractère max]``**: Pour transformer votre texte ! \n**``$avatar [rien ou @mention]``**: Pour voir la photo de profil de quelqu'un ! \n**``$search [chose a rechercher]``**: Pour rechercher des choses sur Google ! \n**``$wikimario``**: Pour tout savoir sur Mario ! \n**``$wikiyoshi``**: Pour tout savoir sur Yoshi ! \n**``$8ball [une question]``**: Un esprit va répondre a vos questions !")
+
+message.author.send(fun)
+    
+var info = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.addField("Commandes informations","**``$list``**: Pour savoir sur combien et quelle seveur le BOT est ! \n**``$bug``**: Pour savoir les bugs du BOT ! \n**``$credit``**: Pour voir le staff du BOT ! \n**``$infobot``**: Pour avoir les informations du BOT ! \n**``$infoserveur``**: Pour avoir les info sur le serveur ! \n**``$everyinvite``**: Pour avoir l'invitation du BOT avec un everyone ! \n**``$partenaire``**: Pour savoir si il ya des partenaires du BOT ! \n**``$update``**: Pour savoir les chose qu'il va y avoir dans l'avenir du BOT !")
+
+message.author.send(info)
+    
+var modo = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.addField("Commandes Modérateurs","**``$ban [@mention] [raison]``**: Permet de bannir un utilisateur \n**``$mute [@mention] [raison]``**: Permet du rendre muet un utilisateur \n**``$unmute [@mention]``**: Permet de rendre la parole à un utilisateur (Fonctionne que avec le $mute) \n**``$tempmute [@mention] [temps du mute] ``**: Permet de rendre muet un utilisateur avec un temp défini \n**``$addrole [@mention] [@mention du rôle]``**: Permet de donner un rôle à un utilisateur \n**``$send [texte]``**: Permet d'écrire un message avec le bot \n**``$poll [texte]``**: Permet de faire un sondage \n**``$giveaways [nombre de gagnants] [temps du giveaways (1m, 1h, 1d)] [chose a gagner]``**: Permet de faire un giveaway ! \n**``$clear [nombre de message a supprimer]``**: Pour supprimer des messages ! \n**``$report [cause du report]``**: Pour report des utilisateur au staff du serveur ! ")
+
+message.author.send(modo)
+    
+var img = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.addField("Commandes images",`**$beautiful :** Votre photo de profil est très belle ! \n**$blood :** Un crime a eu lieu ! \n**$blur :** Vous êtes flou ! \n**$paint :** Votre painture est très réussi ! \n**$captcha :** Êtes vous ${message.author} ? \n**$jacko :** Ce n'est pas halloween ? \n**$prison :** Quelle bêtises avez vous fait pour vous retrouver en prison ? \n**$treasure :** Vous êtes le parchemins de la vériter ! \n**$triggered :** Aucune description disponible ! \n**$pokemon :** Vous êtes un pokemon ? `)
+
+message.author.send(img)
+    
+var musique = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.addField("Commandes Musiques","**``$play [URL de la musique/vidéo]``**: Pour Mettre une musique/vidéo dans le salon vocal ou on est ! \n**``$stop``**: Pour arrêter la musique/vidéo")
+  
+message.author.send(musique)
+
+erreur.edit("Vous avez reçus un MP !").then(message => message.delete(5000))
+});
+
+  console.log ("La commande HelpMP a été utiliser !");  
+message.delete().catch(); 
+}
+module.exports.help = { 
+name: "helpmp"
+}
